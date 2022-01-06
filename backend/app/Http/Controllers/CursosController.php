@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Curso;
+            
 class CursosController extends Controller
 {
     /**
@@ -13,7 +14,9 @@ class CursosController extends Controller
      */
     public function index()
     {
-        //
+        $dados = Curso::all();
+
+        return response()->json($dados);
     }
 
     /**

@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CursosFasesController;
+use App\Http\Controllers\CursosController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,6 +21,5 @@ use App\Http\Controllers\CursosFasesController;
 
 Route::prefix('v1')->group(function () {
     Route::apiResource('cursos_fases', CursosFasesController::class);
-    Route::get('/cursos', 'CursosController@index');
-    Route::post('/cursos', 'CursosController@store');
+    Route::apiResource('cursos', CursosController::class);
 });
