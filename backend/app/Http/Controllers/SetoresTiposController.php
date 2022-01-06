@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Setor;
+use App\Models\SetorTipo;
 
-class SetoresController extends Controller
+class SetoresTiposController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,10 +14,10 @@ class SetoresController extends Controller
      */
     public function index()
     {
-        $setores = Setor::all();
-        return response()->json($setores);
-    }
+        $setores_tipos = SetorTipo::all();
 
+        return response()->json($setores_tipos);
+    }
 
     /**
      * Show the form for creating a new resource.
