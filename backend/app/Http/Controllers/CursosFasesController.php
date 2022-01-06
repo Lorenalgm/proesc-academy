@@ -37,7 +37,7 @@ class CursosFasesController extends Controller
     public function show($id)
     {
         $curso_fase = CursoFase::findOrFail($id);
-        return $curso_fase;
+        return response()->json($curso_fase);
     }
 
     /**
