@@ -22,4 +22,5 @@ use App\Http\Controllers\CursosController;
 Route::prefix('v1')->group(function () {
     Route::apiResource('cursos_fases', CursosFasesController::class);
     Route::apiResource('cursos', CursosController::class);
+    Route::apiResource('cursos_fases_aulas', CursosFasesAulasController::class);
 });
