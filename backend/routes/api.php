@@ -22,4 +22,4 @@ Route::prefix('v1')->group(function () {
     Route::apiResource('cursos_fases', CursosFasesController::class);
     Route::get('/cursos', 'CursosController@index');
     Route::post('/cursos', 'CursosController@store');
-})
+});
