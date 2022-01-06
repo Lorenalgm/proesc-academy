@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\CursoFase;
 
 class CursosFasesController extends Controller
 {
@@ -13,7 +14,7 @@ class CursosFasesController extends Controller
      */
     public function index()
     {
-        //
+        return CursoFase::all();
     }
 
     /**
@@ -24,7 +25,7 @@ class CursosFasesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        CursoFase::create($request->all());
     }
 
     /**
@@ -35,7 +36,8 @@ class CursosFasesController extends Controller
      */
     public function show($id)
     {
-        //
+        $curso_fase = CursoFase::findOrFail($id);
+        return response()->json($curso_fase);
     }
 
     /**
@@ -47,7 +49,8 @@ class CursosFasesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $curso_fase = CursoFase::findOrFail($id);
+        $curso_fase->update($request->all());
     }
 
     /**
@@ -58,6 +61,7 @@ class CursosFasesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $curso_fase = CursoFase::findOrFail($id);
+        $curso_fase->delete();
     }
 }
