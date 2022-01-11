@@ -6,6 +6,7 @@ use App\Http\Controllers\CursosFasesController;
 use App\Http\Controllers\CursosFasesAulasController;
 use App\Http\Controllers\CursosController;
 use App\Http\Controllers\SetoresController;
+use App\Http\Controllers\CursosFasesAulasMateriaisController;
 
 /*
 |--------------------------------------------------------------------------
