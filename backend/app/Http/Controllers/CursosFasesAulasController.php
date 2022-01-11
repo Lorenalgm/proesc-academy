@@ -15,8 +15,8 @@ class CursosFasesAulasController extends Controller
      */
     public function index()
     {
-        $contacts = CursoFaseAula::all();
-        return response()->json($contacts);
+        $data = CursoFaseAula::all();
+        return response()->json($data);
     }
 
     /**
@@ -24,8 +24,8 @@ class CursosFasesAulasController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function store(Request $request)
     {
-        //
+        CursoFaseAula::create($request->all());
     }
 }
