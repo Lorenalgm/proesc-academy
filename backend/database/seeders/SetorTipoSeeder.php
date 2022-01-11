@@ -15,9 +15,6 @@ class SetorTipoSeeder extends Seeder
      */
     public function run()
     {
-        // db:seed-undo    Undo seeds in the seeds directory.
-        // db:seed-refresh Undo seeds run seeds again.
-
         SetorTipo::create([
             'nome' => 'Interno',
         ]);
