@@ -18,8 +18,6 @@ class CreateSetores extends Migration
             $table->string('nome')->unique();
             $table->unsignedBigInteger('setor_tipo_id');
             $table->foreign('setor_tipo_id')->references('id')->on('setores_tipos');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
         });

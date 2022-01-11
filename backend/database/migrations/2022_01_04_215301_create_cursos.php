@@ -17,7 +17,7 @@ class CreateCursos extends Migration
             $table->id();
             $table->string('nome');
             $table->boolean('obrigatorio')->nullable()->default(false);
-            $table->integer('prazos_dias');
+            $table->integer('prazos_dias')->nullable();
             $table->string('icone')->nullable();
             $table->timestamps();
         });

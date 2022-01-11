@@ -11,8 +11,7 @@ class Setor extends Model
 
     protected $fillable = [
         'nome',
-        'setor_tipo_id',
-        'user_id'
+        'setor_tipo_id'
     ];
 
     protected $table = 'setores';

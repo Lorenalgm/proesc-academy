@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Curso;
-            
+
 class CursosController extends Controller
 {
     /**
@@ -37,7 +37,7 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Curso::create($request->all());
     }
 
     /**
