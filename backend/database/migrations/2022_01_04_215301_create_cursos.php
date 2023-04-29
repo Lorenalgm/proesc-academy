@@ -16,7 +16,7 @@ class CreateCursos extends Migration
         Schema::create('cursos', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-            $table->boolean('obrigatorio')->nullable()->default(false);
+            $table->boolean('obrigatorio')->default(false);
             $table->integer('prazos_dias')->nullable();
             $table->string('icone')->nullable();
             $table->timestamps();

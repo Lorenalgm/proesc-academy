@@ -19,6 +19,8 @@ class CreateCursosSetores extends Migration
             $table->foreign('curso_id')->references('id')->on('cursos');
             $table->unsignedBigInteger('setor_id');
             $table->foreign('setor_id')->references('id')->on('setores');
+            $table->boolean('obrigatorio')->default(false);
+            $table->string('prazo_dias');
             $table->timestamps();
         });
     }
